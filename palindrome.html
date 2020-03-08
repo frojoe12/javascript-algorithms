@@ -1,0 +1,22 @@
+<script>
+  
+  const palindrome = word => {
+    const wordArray = word.split('')
+    const wordArrayReverse = [...wordArray]
+    wordArrayReverse.reverse().join('')
+    wordArray.join('')
+    let isPalindrome = false
+    console.log(wordArray.join(''))
+    JSON.stringify(wordArrayReverse) === JSON.stringify(wordArray)
+      ? (isPalindrome = true)
+      : null
+    return isPalindrome
+  }
+  const word1 = palindrome('abcdedcba')
+  const word2 = palindrome('catcat')
+
+  console.log(JSON.stringify(`Word 1 : ${word1}, word 2 : ${word2}`))
+  
+  /* NB to compare arrays use JSON.stringify or find length and iterate through each part of array */
+  
+</script>
